@@ -181,13 +181,25 @@ A single sparkle button in the chat header generates a comparative summary acros
 
 ---
 
-## ✨ Creative Feature — Live Password Strength Checker
+## ✨ Creative Features
+
+### 1. Live Password Strength Checker
 
 **What it is:** On the registration page, as the user types their password, a live checklist appears showing exactly which requirements are met or unmet (uppercase, lowercase, number, special character, minimum length). A color-coded strength bar updates in real time from Weak → Fair → Good → Strong → Excellent. The submit button stays disabled until all rules pass.
 
 **Problem it solves:** Most registration forms either silently reject weak passwords after submission, or show a vague "password too weak" error with no guidance. This creates a frustrating loop of submitting → getting an error → guessing → resubmitting. The live checklist gives users instant, actionable feedback so they know exactly what to fix before they even attempt to submit.
 
-**Engineering approach:** The password rules are defined once as an array of `{ label, test }` objects and reused for both the UI checklist and the client-side validation guard. The same rules are independently enforced in the Zod schema on the backend — so even if someone bypasses the frontend, the API rejects weak passwords with a clear error.
+**Engineering approach:** The password rules are defined once as an array of `{ label, test }` objects and reused for both the UI checklist and the client-side submit guard. The same rules are independently enforced in the Zod schema on the backend — so even if someone bypasses the frontend, the API rejects weak passwords with a clear error.
+
+---
+
+### 2. Floating AI Chat Assistant with City Context
+
+**What it is:** A persistent floating chat bubble in the bottom-right corner of the dashboard. The assistant has full awareness of all the user's tracked cities and their live weather data. Users can pin a specific city using city chips to focus the conversation, ask natural language questions, and get a one-click cross-city summary.
+
+**Problem it solves:** Raw weather numbers (28°C, 72% humidity, 14 km/h wind) are not always useful on their own. Users often want answers to real questions — "Should I go for a run today?", "Which of my cities has the best weather this weekend?", "Do I need a jacket in Delhi right now?" — but no standard weather app answers these directly. The AI chat turns raw weather data into actionable, conversational answers.
+
+**Engineering approach:** Every message sent to the LLM includes the full live weather context for all tracked cities serialized as JSON, plus the last 8 messages of conversation history for continuity. This means the assistant always has up-to-date data without needing to call any external API itself — the data pipeline flows from Open-Meteo → backend → frontend → AI context. Three distinct AI surfaces were built: per-city insight modal, floating chat, and cross-city summary — each optimized for a different user intent.
 
 ---
 
