@@ -8,10 +8,10 @@ A full-stack weather dashboard where users can register, log in, track multiple 
 
 | | |
 |---|---|
-| Live App | `<your-frontend-url>` |
+| Live App | `https://weather-sharukh.vercel.app/` |
 | Backend API | `<your-backend-url>` |
 | GitHub Repo | `<your-github-url>` |
-| Walkthrough Video | `<your-video-link>` |
+| Walkthrough Video | `https://drive.google.com/file/d/1TaUqBmQQKFnpuu0GGv8K0L6tPbPz9vIa/view?usp=sharing` |
 
 ---
 
