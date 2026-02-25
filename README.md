@@ -66,14 +66,14 @@ The preferred stack was used as-is since it was a natural fit for the problem.
 ### 1. Clone the repo
 
 ```bash
-git clone <your-repo-url>
-cd weatherdash
+git clone https://github.com/SharukhPathan15/skybrain-weather.git
+cd WEATHER
 ```
 
 ### 2. Setup Backend
 
 ```bash
-cd server
+cd weather-backend
 npm install
 ```
 
@@ -83,7 +83,6 @@ Create `server/.env`:
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/weatherdash
 JWT_SECRET=your_secret_key_here
-NODE_ENV=development
 CLIENT_URL=http://localhost:3000
 GROQ_API_KEY=your_groq_key_here
 ```
@@ -95,7 +94,7 @@ npm run dev
 ### 3. Setup Frontend
 
 ```bash
-cd client
+cd weather-frontend
 npm install
 ```
 
