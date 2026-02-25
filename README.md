@@ -9,8 +9,8 @@ A full-stack weather dashboard where users can register, log in, track multiple 
 | | |
 |---|---|
 | Live App | `https://weather-sharukh.vercel.app/` |
-| Backend API | `<your-backend-url>` |
-| GitHub Repo | `<your-github-url>` |
+| Backend API | `https://weather-backend-drab.vercel.app/` |
+| GitHub Repo | `https://github.com/SharukhPathan15/skybrain-weather.git` |
 | Walkthrough Video | `https://drive.google.com/file/d/1TaUqBmQQKFnpuu0GGv8K0L6tPbPz9vIa/view?usp=sharing` |
 
 ---
@@ -235,14 +235,14 @@ Switching to Open-Meteo meant OWM icon URLs were no longer valid. Emojis remove 
 ## 🌍 Deployment Guide
 
 ### Frontend → Vercel
-1. Push `client/` to GitHub
+1. Push `weather-frontend/` to GitHub
 2. Import repo at [vercel.com](https://vercel.com)
 3. Add environment variable: `NEXT_PUBLIC_API_URL=<your-backend-url>/api`
 4. Deploy
 
-### Backend → Render
-1. Push `server/` to GitHub
-2. Create a new Web Service at [render.com](https://render.com)
+### Backend → Varcel
+1. Push `weather-backend/` to GitHub
+2. Import repo at [vercel.com](https://vercel.com)
 3. Add all environment variables from `.env` in the Render dashboard
 4. Deploy
 
