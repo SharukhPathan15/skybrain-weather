@@ -8,8 +8,8 @@ A full-stack weather dashboard where users can register, log in, track multiple 
 
 | | |
 |---|---|
-| Live App | `https://weather-sharukh.vercel.app/` |
-| Backend API | `https://weather-backend-drab.vercel.app/` |
+| Live App | `https://weather-frontend-cyan.vercel.app` |
+| Backend API | `https://weather-backend-e828.onrender.com/` |
 | GitHub Repo | `https://github.com/SharukhPathan15/skybrain-weather.git` |
 | Walkthrough Video | `https://drive.google.com/file/d/1TaUqBmQQKFnpuu0GGv8K0L6tPbPz9vIa/view?usp=sharing` |
 
